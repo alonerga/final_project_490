@@ -1,0 +1,37 @@
+---
+title: "Enzyme_Analysis"
+author: "Andrew Lonergan"
+date: "10/23/2019"
+output: html_document
+---
+
+# Extracellular Enzyme Assay Analysis
+## Geology 490 Final Project
+#### Andrew Lonergan  
+    
+**Introduction**  
+This is an R markdown file showing analysis of research I conducted in Dr. Andrew Steen's biogeochemistry lab. We will use a variety of packages and sets of packages to analyze this data in R. Tidyverse is a set of packages meant for data science. Lubridate helps ease the complications surrounding dates and times in R. Devtools creates a directory structure for your packages.  
+
+```{r, message = FALSE}
+# install.packages("package name") first, then do the following:
+library(tidyverse)
+library(lubridate)
+library(devtools)
+```
+
+Now that we have our main packages loaded in, we need one more package: lmstats. Lmstats is a function to provide a vector summary output of linear models. 
+
+```{r, message = FALSE}
+# Must have done library(devtools) to complete next step:
+install_github("adsteen/lmstats")
+library(lmstats)
+```
+
+Read in your data from wherever it is stored in your drive
+
+```{r}
+mydata <- read.csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.csv")
+glimpse(mydata)
+```
+  
+**Adjust data to improve time and date**  
