@@ -1,16 +1,40 @@
 ---
-title: "Enzyme_Analysis"
+title: "Extracellular Enzyme Assay Analysis from Samples in Panama"
 author: "Andrew Lonergan"
-date: "10/23/2019"
+date: "Fall 2019"
 output: html_document
 ---
 
-# Extracellular Enzyme Assay Analysis
-## Geology 490 Final Project
-#### Andrew Lonergan  
+  
     
-**Introduction**  
-This is an R markdown file showing analysis of research I conducted in Dr. Andrew Steen's biogeochemistry lab. We will use a variety of packages and sets of packages to analyze this data in R. Tidyverse is a set of packages meant for data science. Lubridate helps ease the complications surrounding dates and times in R. Devtools creates a directory structure for your packages.  
+      
+### Introduction
+
+This is an R markdown file showing analysis of research I conducted in Dr. Andrew Steen's biogeochemistry lab. This markdown can be used as a reference for extracellular enzyme assay analyses, or in order to reproduce the analysis we did. 
+
+#### Research Background  
+The goal of this project is to determine how extracellular enzymes are reacting with substrates in the various hot springs in which the samples were collected. We are hoping to understand if enzymes are following Michaelis Menten kinetics. 
+Inline equations can be useful for displaying variables (greek or otherwise) like $K_m$ or $\mu$.
+
+Display equations are set off from the rest of the text.
+$$
+v_o = \frac{V_{max} \times [S]}{K_m + [S]}
+$$ 
+
+### Initial Steps  
+We will use a variety of packages and sets of packages to analyze this data in R. Tidyverse is a set of packages meant for data science. Lubridate helps ease the complications surrounding dates and times in R. Devtools creates a directory structure for your packages.  
+
+
+Note that you can run code that *doesn't* show in the output file, even though it runs
+```{r, echo = FALSE}
+a <- 2+2
+```
+
+```{r}
+print(a)
+```
+
+We will use the *tidyverse*, *lubridate* and *devtools* packages:
 
 ```{r, message = FALSE}
 # install.packages("package name") first, then do the following:
@@ -19,19 +43,51 @@ library(lubridate)
 library(devtools)
 ```
 
-Now that we have our main packages loaded in, we need one more package: lmstats. Lmstats is a function to provide a vector summary output of linear models. 
+Now that we have our main packages loaded in, we need one more package: *lmstats*. Lmstats is a function to provide a vector summary output of linear models. 
 
 ```{r, message = FALSE}
 # Must have done library(devtools) to complete next step:
-install_github("adsteen/lmstats")
+# install_github("adsteen/lmstats")
 library(lmstats)
 ```
 
-Read in your data from wherever it is stored in your drive
+Read in your data from wherever it is stored in your drive, and use glimpse to make sure it looks correct
 
 ```{r}
 mydata <- read.csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.csv")
 glimpse(mydata)
 ```
-  
-**Adjust data to improve time and date**  
+    
+#### Adjust data to improve time and date  
+
+The data in my csv is hour:minute of when each fluorometer measurement was taken. This is helpful to know the change of RFU over time, but isn't so helpful when we want to compare all of our results across a similar two hour time period. Here we mutate our date and time so all measurements are placed on a similar scale and will be something that the computer will understand.
+
+We want our date and time to be in year month day, hour minute second, therefore *ymd_hms*  
+Rename our column heads (spaces get tricky with R)
+
+```{r, message = FALSE}
+mydata <- read_csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.csv") %>%
+  mutate(date.time = ymd_hms(paste("2020-01-01", Time))) %>%
+  rename(filter.type = `Filter type`, filter.weight = `Filter weight`) %>%
+  group_by(Site, Substrate, Cuvette, filter.type, filter.weight) %>%
+  mutate(elapsed.hr = as.numeric(date.time -  min(date.time)) / 3600) # divide by 3600 to go from seconds to hours
+```
+
+You will now find an elapsed hour column, which will help us compare all results over the same time scale
+
+### Plot the raw data
+
+```{r}
+p_raw <- ggplot(mydata, aes(x = elapsed.hr,
+                            y = RFU,
+                            color = filter.type)) +
+  geom_point() +
+  geom_smooth(aes(group = Cuvette),
+              method = "lm",
+              se = FALSE) +
+  facet_wrap(Substrate~Site, scales = "free")
+```
+
+```{r}
+print(p_raw)
+```

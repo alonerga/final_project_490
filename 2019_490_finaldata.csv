@@ -1,0 +1,493 @@
+Site,Substrate,Cuvette,Filter type,Filter weight,RFU,Time,Interval
+Los Pozos Thermales (warm),Leucine-AMC,1,Live,0.0047,4755.27,15:17,0
+Los Pozos Thermales (warm),Leucine-AMC,1,Live,0.0047,6657.7,15:37,20
+Los Pozos Thermales (warm),Leucine-AMC,1,Live,0.0047,7708.17,15:59,40
+Los Pozos Thermales (warm),Leucine-AMC,1,Live,0.0047,7809.8,16:18,60
+Los Pozos Thermales (warm),Leucine-AMC,1,Live,0.0047,8028.58,16:39,80
+Los Pozos Thermales (warm),Leucine-AMC,1,Live,0.0047,8274.79,17:00,100
+Los Pozos Thermales (warm),Leucine-AMC,1,Live,0.0047,8411.45,17:20,120
+Los Pozos Thermales (warm),Leucine-AMC,2,Live,0.0062,2601.68,15:17,0
+Los Pozos Thermales (warm),Leucine-AMC,2,Live,0.0062,3091.59,15:38,20
+Los Pozos Thermales (warm),Leucine-AMC,2,Live,0.0062,7558.62,15:59,40
+Los Pozos Thermales (warm),Leucine-AMC,2,Live,0.0062,7584.45,16:18,60
+Los Pozos Thermales (warm),Leucine-AMC,2,Live,0.0062,7889.33,16:39,80
+Los Pozos Thermales (warm),Leucine-AMC,2,Live,0.0062,8088.54,17:00,100
+Los Pozos Thermales (warm),Leucine-AMC,2,Live,0.0062,8283.49,17:20,120
+Los Pozos Thermales (warm),Leucine-AMC,3,Control,0.0023,5302.73,15:17,0
+Los Pozos Thermales (warm),Leucine-AMC,3,Control,0.0023,6604.33,15:38,20
+Los Pozos Thermales (warm),Leucine-AMC,3,Control,0.0023,6422.99,16:00,40
+Los Pozos Thermales (warm),Leucine-AMC,3,Control,0.0023,6427.02,16:19,60
+Los Pozos Thermales (warm),Leucine-AMC,3,Control,0.0023,6460.12,16:39,80
+Los Pozos Thermales (warm),Leucine-AMC,3,Control,0.0023,6415.37,17:00,100
+Los Pozos Thermales (warm),Leucine-AMC,3,Control,0.0023,6416.95,17:20,120
+Los Pozos Thermales (warm),Arginine-AMC,1,Live,0.004,3849.93,15:17,0
+Los Pozos Thermales (warm),Arginine-AMC,1,Live,0.004,4716.25,15:38,20
+Los Pozos Thermales (warm),Arginine-AMC,1,Live,0.004,7615.16,16:00,40
+Los Pozos Thermales (warm),Arginine-AMC,1,Live,0.004,7751.89,16:19,60
+Los Pozos Thermales (warm),Arginine-AMC,1,Live,0.004,7888.33,16:40,80
+Los Pozos Thermales (warm),Arginine-AMC,1,Live,0.004,7983.08,17:00,100
+Los Pozos Thermales (warm),Arginine-AMC,1,Live,0.004,8100.67,17:20,120
+Los Pozos Thermales (warm),Arginine-AMC,2,Live,0.0047,5940.12,15:18,0
+Los Pozos Thermales (warm),Arginine-AMC,2,Live,0.0047,7553.73,15:39,20
+Los Pozos Thermales (warm),Arginine-AMC,2,Live,0.0047,7532.19,16:00,40
+Los Pozos Thermales (warm),Arginine-AMC,2,Live,0.0047,7640.47,16:19,60
+Los Pozos Thermales (warm),Arginine-AMC,2,Live,0.0047,7762.66,16:40,80
+Los Pozos Thermales (warm),Arginine-AMC,2,Live,0.0047,7878.73,17:00,100
+Los Pozos Thermales (warm),Arginine-AMC,2,Live,0.0047,7992.98,17:21,120
+Los Pozos Thermales (warm),Arginine-AMC,3,Control,0.0026,7048.16,16:00,40
+Los Pozos Thermales (warm),Arginine-AMC,3,Control,0.0026,7281.16,16:19,60
+Los Pozos Thermales (warm),Arginine-AMC,3,Control,0.0026,7325.81,16:40,80
+Los Pozos Thermales (warm),Arginine-AMC,3,Control,0.0026,7408.75,17:01,100
+Los Pozos Thermales (warm),Arginine-AMC,3,Control,0.0026,7447.91,17:21,120
+Los Pozos Thermales (warm),MUB-Sulfate,1,Live,0.005,1472.54,15:18,0
+Los Pozos Thermales (warm),MUB-Sulfate,1,Live,0.005,1942.02,15:39,20
+Los Pozos Thermales (warm),MUB-Sulfate,1,Live,0.005,1884.11,16:00,40
+Los Pozos Thermales (warm),MUB-Sulfate,1,Live,0.005,1856.76,16:20,60
+Los Pozos Thermales (warm),MUB-Sulfate,1,Live,0.005,1829.9,16:40,80
+Los Pozos Thermales (warm),MUB-Sulfate,1,Live,0.005,1808.66,17:01,100
+Los Pozos Thermales (warm),MUB-Sulfate,1,Live,0.005,1789.39,17:21,120
+Los Pozos Thermales (warm),MUB-Sulfate,2,Live,0.004,1541.34,15:18,0
+Los Pozos Thermales (warm),MUB-Sulfate,2,Live,0.004,1919.88,15:39,20
+Los Pozos Thermales (warm),MUB-Sulfate,2,Live,0.004,2036.97,16:01,40
+Los Pozos Thermales (warm),MUB-Sulfate,2,Live,0.004,1996.87,16:20,60
+Los Pozos Thermales (warm),MUB-Sulfate,2,Live,0.004,1987,16:40,80
+Los Pozos Thermales (warm),MUB-Sulfate,2,Live,0.004,1968.56,17:01,100
+Los Pozos Thermales (warm),MUB-Sulfate,2,Live,0.004,1946.54,17:21,120
+Los Pozos Thermales (warm),MUB-Sulfate,3,Control,0.002,1829.92,15:40,20
+Los Pozos Thermales (warm),MUB-Sulfate,3,Control,0.002,1908.39,16:01,40
+Los Pozos Thermales (warm),MUB-Sulfate,3,Control,0.002,1874.59,16:20,60
+Los Pozos Thermales (warm),MUB-Sulfate,3,Control,0.002,1861.04,16:41,80
+Los Pozos Thermales (warm),MUB-Sulfate,3,Control,0.002,1839.57,17:01,100
+Los Pozos Thermales (warm),MUB-Sulfate,3,Control,0.002,1822.5,17:22,120
+Los Pozos Thermales (warm),MUB-B-Cellobioside,1,Live,0.0066,1324.78,15:19,0
+Los Pozos Thermales (warm),MUB-B-Cellobioside,1,Live,0.0066,1330.11,15:40,20
+Los Pozos Thermales (warm),MUB-B-Cellobioside,1,Live,0.0066,1311.4,16:01,40
+Los Pozos Thermales (warm),MUB-B-Cellobioside,1,Live,0.0066,1298.78,16:20,60
+Los Pozos Thermales (warm),MUB-B-Cellobioside,1,Live,0.0066,1290.66,16:41,80
+Los Pozos Thermales (warm),MUB-B-Cellobioside,1,Live,0.0066,1287.42,17:01,100
+Los Pozos Thermales (warm),MUB-B-Cellobioside,1,Live,0.0066,1277.54,17:22,120
+Los Pozos Thermales (warm),MUB-B-Cellobioside,2,Live,0.0021,1211.07,15:19,0
+Los Pozos Thermales (warm),MUB-B-Cellobioside,2,Live,0.0021,1189.22,15:40,20
+Los Pozos Thermales (warm),MUB-B-Cellobioside,2,Live,0.0021,1178.93,16:01,40
+Los Pozos Thermales (warm),MUB-B-Cellobioside,2,Live,0.0021,1205.19,16:21,60
+Los Pozos Thermales (warm),MUB-B-Cellobioside,2,Live,0.0021,1202.76,16:41,80
+Los Pozos Thermales (warm),MUB-B-Cellobioside,2,Live,0.0021,1197.82,17:01,100
+Los Pozos Thermales (warm),MUB-B-Cellobioside,2,Live,0.0021,1194.84,17:22,120
+Los Pozos Thermales (warm),MUB-B-Cellobioside,3,Control,0.0024,1289.49,15:19,0
+Los Pozos Thermales (warm),MUB-B-Cellobioside,3,Control,0.0024,1270.03,15:41,20
+Los Pozos Thermales (warm),MUB-B-Cellobioside,3,Control,0.0024,1264.26,16:02,40
+Los Pozos Thermales (warm),MUB-B-Cellobioside,3,Control,0.0024,1280.73,16:21,60
+Los Pozos Thermales (warm),MUB-B-Cellobioside,3,Control,0.0024,1272.5,16:42,80
+Los Pozos Thermales (warm),MUB-B-Cellobioside,3,Control,0.0024,1262.34,17:02,100
+Los Pozos Thermales (warm),MUB-B-Cellobioside,3,Control,0.0024,1259.39,17:23,120
+Los Pozos Thermales (warm),MUB-PO4,1,Live,0.0064,1422.1,15:19,0
+Los Pozos Thermales (warm),MUB-PO4,1,Live,0.0064,2906.85,15:41,20
+Los Pozos Thermales (warm),MUB-PO4,1,Live,0.0064,2787.94,16:02,40
+Los Pozos Thermales (warm),MUB-PO4,1,Live,0.0064,2948.16,16:21,60
+Los Pozos Thermales (warm),MUB-PO4,1,Live,0.0064,2818.89,16:42,80
+Los Pozos Thermales (warm),MUB-PO4,1,Live,0.0064,2830.38,17:02,100
+Los Pozos Thermales (warm),MUB-PO4,1,Live,0.0064,2802.4,17:23,120
+Los Pozos Thermales (warm),MUB-PO4,2,Live,0.0011,1455.17,15:20,0
+Los Pozos Thermales (warm),MUB-PO4,2,Live,0.0011,2411.34,15:41,20
+Los Pozos Thermales (warm),MUB-PO4,2,Live,0.0011,2717.25,16:02,40
+Los Pozos Thermales (warm),MUB-PO4,2,Live,0.0011,2756.89,16:21,60
+Los Pozos Thermales (warm),MUB-PO4,2,Live,0.0011,2782.04,16:42,80
+Los Pozos Thermales (warm),MUB-PO4,2,Live,0.0011,2787.4,17:02,100
+Los Pozos Thermales (warm),MUB-PO4,2,Live,0.0011,2812.24,17:23,120
+Los Pozos Thermales (warm),MUB-PO4,3,Control,0.0014,2605.76,15:41,20
+Los Pozos Thermales (warm),MUB-PO4,3,Control,0.0014,2682.73,16:02,40
+Los Pozos Thermales (warm),MUB-PO4,3,Control,0.0014,2706.45,16:22,60
+Los Pozos Thermales (warm),MUB-PO4,3,Control,0.0014,2742.98,16:42,80
+Los Pozos Thermales (warm),MUB-PO4,3,Control,0.0014,2748.74,17:03,100
+Los Pozos Thermales (warm),MUB-PO4,3,Control,0.0014,2769.08,17:23,120
+Los Pozos Thermales (hot),Leucine-AMC,1,Live,0.0234,3794.62,18:52,0
+Los Pozos Thermales (hot),Leucine-AMC,1,Live,0.0234,7386.02,19:12,20
+Los Pozos Thermales (hot),Leucine-AMC,1,Live,0.0234,7356.06,19:32,40
+Los Pozos Thermales (hot),Leucine-AMC,1,Live,0.0234,7922.21,19:52,60
+Los Pozos Thermales (hot),Leucine-AMC,1,Live,0.0234,7803.29,20:12,80
+Los Pozos Thermales (hot),Leucine-AMC,1,Live,0.0234,7992.76,20:32,100
+Los Pozos Thermales (hot),Leucine-AMC,1,Live,0.0234,8125.09,20:51,120
+Los Pozos Thermales (hot),Leucine-AMC,2,Live,0.0151,1476.18,18:52,0
+Los Pozos Thermales (hot),Leucine-AMC,2,Live,0.0151,5288.76,19:12,20
+Los Pozos Thermales (hot),Leucine-AMC,2,Live,0.0151,7794.46,19:32,40
+Los Pozos Thermales (hot),Leucine-AMC,2,Live,0.0151,8014.45,19:52,60
+Los Pozos Thermales (hot),Leucine-AMC,2,Live,0.0151,8236.23,20:12,80
+Los Pozos Thermales (hot),Leucine-AMC,2,Live,0.0151,8456.22,20:32,100
+Los Pozos Thermales (hot),Leucine-AMC,2,Live,0.0151,8626.15,20:51,120
+Los Pozos Thermales (hot),Leucine-AMC,3,Control,0.0059,11967.63,19:12,20
+Los Pozos Thermales (hot),Leucine-AMC,3,Control,0.0059,12643.93,19:33,40
+Los Pozos Thermales (hot),Leucine-AMC,3,Control,0.0059,12245.36,19:52,60
+Los Pozos Thermales (hot),Leucine-AMC,3,Control,0.0059,13146.96,20:12,80
+Los Pozos Thermales (hot),Leucine-AMC,3,Control,0.0059,13852.51,20:32,100
+Los Pozos Thermales (hot),Leucine-AMC,3,Control,0.0059,13582.79,20:51,120
+Los Pozos Thermales (hot),Arginine-AMC,1,Live,0.0135,2393.43,18:53,0
+Los Pozos Thermales (hot),Arginine-AMC,1,Live,0.0135,7507.86,19:13,20
+Los Pozos Thermales (hot),Arginine-AMC,1,Live,0.0135,8039.64,19:33,40
+Los Pozos Thermales (hot),Arginine-AMC,1,Live,0.0135,8202,19:52,60
+Los Pozos Thermales (hot),Arginine-AMC,1,Live,0.0135,8386.99,20:13,80
+Los Pozos Thermales (hot),Arginine-AMC,1,Live,0.0135,8812.89,20:33,100
+Los Pozos Thermales (hot),Arginine-AMC,1,Live,0.0135,9124,20:51,120
+Los Pozos Thermales (hot),Arginine-AMC,2,Live,0.0111,1457.09,18:53,0
+Los Pozos Thermales (hot),Arginine-AMC,2,Live,0.0111,4999.93,19:13,20
+Los Pozos Thermales (hot),Arginine-AMC,2,Live,0.0111,8575.4,19:33,40
+Los Pozos Thermales (hot),Arginine-AMC,2,Live,0.0111,8941.82,19:53,60
+Los Pozos Thermales (hot),Arginine-AMC,2,Live,0.0111,9300.57,20:13,80
+Los Pozos Thermales (hot),Arginine-AMC,2,Live,0.0111,9683.7,20:33,100
+Los Pozos Thermales (hot),Arginine-AMC,2,Live,0.0111,9959.81,20:52,120
+Los Pozos Thermales (hot),Arginine-AMC,3,Control,0.0029,7606.91,19:34,40
+Los Pozos Thermales (hot),Arginine-AMC,3,Control,0.0029,8024.16,19:53,60
+Los Pozos Thermales (hot),Arginine-AMC,3,Control,0.0029,8342.64,20:13,80
+Los Pozos Thermales (hot),Arginine-AMC,3,Control,0.0029,8630.08,20:33,100
+Los Pozos Thermales (hot),Arginine-AMC,3,Control,0.0029,8873.25,20:52,120
+Los Pozos Thermales (hot),MUB-Sulfate,1,Live,0.0139,3141.12,18:54,0
+Los Pozos Thermales (hot),MUB-Sulfate,1,Live,0.0139,5217.63,19:14,20
+Los Pozos Thermales (hot),MUB-Sulfate,1,Live,0.0139,4925.33,19:34,40
+Los Pozos Thermales (hot),MUB-Sulfate,1,Live,0.0139,4884.78,19:53,60
+Los Pozos Thermales (hot),MUB-Sulfate,1,Live,0.0139,4758.21,20:14,80
+Los Pozos Thermales (hot),MUB-Sulfate,1,Live,0.0139,4636.08,20:34,100
+Los Pozos Thermales (hot),MUB-Sulfate,1,Live,0.0139,4562.16,20:52,120
+Los Pozos Thermales (hot),MUB-Sulfate,2,Live,0.0127,1545.83,18:54,0
+Los Pozos Thermales (hot),MUB-Sulfate,2,Live,0.0127,3104.54,19:14,20
+Los Pozos Thermales (hot),MUB-Sulfate,2,Live,0.0127,3186.53,19:34,40
+Los Pozos Thermales (hot),MUB-Sulfate,2,Live,0.0127,3107.23,19:54,60
+Los Pozos Thermales (hot),MUB-Sulfate,2,Live,0.0127,3080.06,20:14,80
+Los Pozos Thermales (hot),MUB-Sulfate,2,Live,0.0127,2981.03,20:34,100
+Los Pozos Thermales (hot),MUB-Sulfate,2,Live,0.0127,2935.75,20:52,120
+Los Pozos Thermales (hot),MUB-Sulfate,3,Control,0.0038,3322.17,19:14,20
+Los Pozos Thermales (hot),MUB-Sulfate,3,Control,0.0038,3187.73,19:35,40
+Los Pozos Thermales (hot),MUB-Sulfate,3,Control,0.0038,3118.9,19:54,60
+Los Pozos Thermales (hot),MUB-Sulfate,3,Control,0.0038,3029.07,20:15,80
+Los Pozos Thermales (hot),MUB-Sulfate,3,Control,0.0038,2990.61,20:34,100
+Los Pozos Thermales (hot),MUB-Sulfate,3,Control,0.0038,2917.89,20:53,120
+Los Pozos Thermales (hot),MUB-B-Cellobioside,1,Live,0.0115,1410.22,18:55,0
+Los Pozos Thermales (hot),MUB-B-Cellobioside,1,Live,0.0115,1402.53,19:14,20
+Los Pozos Thermales (hot),MUB-B-Cellobioside,1,Live,0.0115,1405.55,19:35,40
+Los Pozos Thermales (hot),MUB-B-Cellobioside,1,Live,0.0115,1412.57,19:54,60
+Los Pozos Thermales (hot),MUB-B-Cellobioside,1,Live,0.0115,1518.7,20:15,80
+Los Pozos Thermales (hot),MUB-B-Cellobioside,1,Live,0.0115,1540.53,20:34,100
+Los Pozos Thermales (hot),MUB-B-Cellobioside,1,Live,0.0115,1542.51,20:53,120
+Los Pozos Thermales (hot),MUB-B-Cellobioside,2,Live,0.0114,1495.8,18:55,0
+Los Pozos Thermales (hot),MUB-B-Cellobioside,2,Live,0.0114,1559.08,19:14,20
+Los Pozos Thermales (hot),MUB-B-Cellobioside,2,Live,0.0114,1539.66,19:35,40
+Los Pozos Thermales (hot),MUB-B-Cellobioside,2,Live,0.0114,1529.66,19:55,60
+Los Pozos Thermales (hot),MUB-B-Cellobioside,2,Live,0.0114,1483.66,20:15,80
+Los Pozos Thermales (hot),MUB-B-Cellobioside,2,Live,0.0114,1452.55,20:35,100
+Los Pozos Thermales (hot),MUB-B-Cellobioside,2,Live,0.0114,1479.18,20:53,120
+Los Pozos Thermales (hot),MUB-B-Cellobioside,3,Control,0.0035,1466.9,18:55,0
+Los Pozos Thermales (hot),MUB-B-Cellobioside,3,Control,0.0035,1433.52,19:55,60
+Los Pozos Thermales (hot),MUB-B-Cellobioside,3,Control,0.0035,1453.13,20:15,80
+Los Pozos Thermales (hot),MUB-B-Cellobioside,3,Control,0.0035,1425.15,20:35,100
+Los Pozos Thermales (hot),MUB-B-Cellobioside,3,Control,0.0035,1435.32,20:53,120
+Los Pozos Thermales (hot),MUB-PO4,1,Live,0.0132,2016.09,18:56,0
+Los Pozos Thermales (hot),MUB-PO4,1,Live,0.0132,3674.44,19:15,20
+Los Pozos Thermales (hot),MUB-PO4,1,Live,0.0132,3719.44,19:36,40
+Los Pozos Thermales (hot),MUB-PO4,1,Live,0.0132,3773.25,19:55,60
+Los Pozos Thermales (hot),MUB-PO4,1,Live,0.0132,3759.71,20:16,80
+Los Pozos Thermales (hot),MUB-PO4,1,Live,0.0132,3830.93,20:35,100
+Los Pozos Thermales (hot),MUB-PO4,1,Live,0.0132,3825.38,20:54,120
+Los Pozos Thermales (hot),MUB-PO4,2,Live,0.0154,1581.74,18:56,0
+Los Pozos Thermales (hot),MUB-PO4,2,Live,0.0154,3317.43,19:15,20
+Los Pozos Thermales (hot),MUB-PO4,2,Live,0.0154,3420.59,19:36,40
+Los Pozos Thermales (hot),MUB-PO4,2,Live,0.0154,3444.98,19:56,60
+Los Pozos Thermales (hot),MUB-PO4,2,Live,0.0154,3438.85,20:16,80
+Los Pozos Thermales (hot),MUB-PO4,2,Live,0.0154,3511.06,20:35,100
+Los Pozos Thermales (hot),MUB-PO4,2,Live,0.0154,3532.1,20:54,120
+Los Pozos Thermales (hot),MUB-PO4,3,Control,0.0049,8745.57,19:36,40
+Los Pozos Thermales (hot),MUB-PO4,3,Control,0.0049,9805.28,19:57,60
+Los Pozos Thermales (hot),MUB-PO4,3,Control,0.0049,6098.03,20:16,80
+Los Pozos Thermales (hot),MUB-PO4,3,Control,0.0049,6164.98,20:36,100
+Los Pozos Thermales (hot),MUB-PO4,3,Control,0.0049,8074.51,20:54,120
+El Salao Campollano,Leucine-AMC,1,Live,0.0075,1301.58,19:41,0
+El Salao Campollano,Leucine-AMC,1,Live,0.0075,1342.46,20:00,20
+El Salao Campollano,Leucine-AMC,1,Live,0.0075,1368.09,20:20,40
+El Salao Campollano,Leucine-AMC,1,Live,0.0075,1387.32,20:41,60
+El Salao Campollano,Leucine-AMC,1,Live,0.0075,1402.8,21:00,80
+El Salao Campollano,Leucine-AMC,1,Live,0.0075,1489.37,21:19,100
+El Salao Campollano,Leucine-AMC,1,Live,0.0075,1513.25,21:38,120
+El Salao Campollano,Leucine-AMC,2,Live,0.0115,1297.08,19:41,0
+El Salao Campollano,Leucine-AMC,2,Live,0.0115,1309.02,20:00,20
+El Salao Campollano,Leucine-AMC,2,Live,0.0115,1314.62,20:20,40
+El Salao Campollano,Leucine-AMC,2,Live,0.0115,1336.92,20:41,60
+El Salao Campollano,Leucine-AMC,2,Live,0.0115,1360.69,21:00,80
+El Salao Campollano,Leucine-AMC,2,Live,0.0115,3681.65,21:19,100
+El Salao Campollano,Leucine-AMC,2,Live,0.0115,3620.12,21:38,120
+El Salao Campollano,Leucine-AMC,3,Control,0.0037,5582.51,21:01,80
+El Salao Campollano,Leucine-AMC,3,Control,0.0037,4807.96,21:19,100
+El Salao Campollano,Leucine-AMC,3,Control,0.0037,4833.8,21:39,120
+El Salao Campollano,Arginine-AMC,1,Live,0.0134,1732.25,19:41,0
+El Salao Campollano,Arginine-AMC,1,Live,0.0134,1697.15,20:01,20
+El Salao Campollano,Arginine-AMC,1,Live,0.0134,3655.84,20:20,40
+El Salao Campollano,Arginine-AMC,1,Live,0.0134,3570.1,20:41,60
+El Salao Campollano,Arginine-AMC,1,Live,0.0134,3532.52,21:01,80
+El Salao Campollano,Arginine-AMC,1,Live,0.0134,7240.12,21:19,100
+El Salao Campollano,Arginine-AMC,1,Live,0.0134,7298.95,21:39,120
+El Salao Campollano,Arginine-AMC,2,Live,0.01,1365.31,19:42,0
+El Salao Campollano,Arginine-AMC,2,Live,0.01,1344.21,20:01,20
+El Salao Campollano,Arginine-AMC,2,Live,0.01,3293.52,20:20,40
+El Salao Campollano,Arginine-AMC,2,Live,0.01,3217.54,20:42,60
+El Salao Campollano,Arginine-AMC,2,Live,0.01,3186.36,21:01,80
+El Salao Campollano,Arginine-AMC,2,Live,0.01,7479.68,21:20,100
+El Salao Campollano,Arginine-AMC,2,Live,0.01,7825.91,21:39,120
+El Salao Campollano,Arginine-AMC,3,Control,0.0059,3103.88,20:21,40
+El Salao Campollano,Arginine-AMC,3,Control,0.0059,3260.22,20:42,60
+El Salao Campollano,Arginine-AMC,3,Control,0.0059,3331.92,21:01,80
+El Salao Campollano,Arginine-AMC,3,Control,0.0059,3841.1,21:20,100
+El Salao Campollano,Arginine-AMC,3,Control,0.0059,3792.33,21:40,120
+El Salao Campollano,MUB-Sulfate,1,Live,0.0092,1508.04,19:42,0
+El Salao Campollano,MUB-Sulfate,1,Live,0.0092,1692.54,20:01,20
+El Salao Campollano,MUB-Sulfate,1,Live,0.0092,1481.34,20:21,40
+El Salao Campollano,MUB-Sulfate,1,Live,0.0092,1486.92,20:42,60
+El Salao Campollano,MUB-Sulfate,1,Live,0.0092,1487.95,21:02,80
+El Salao Campollano,MUB-Sulfate,1,Live,0.0092,1508.85,21:20,100
+El Salao Campollano,MUB-Sulfate,1,Live,0.0092,1505.8,21:40,120
+El Salao Campollano,MUB-Sulfate,2,Live,0.0081,2448.64,19:43,0
+El Salao Campollano,MUB-Sulfate,2,Live,0.0081,2595.27,20:02,20
+El Salao Campollano,MUB-Sulfate,2,Live,0.0081,2431.82,20:22,40
+El Salao Campollano,MUB-Sulfate,2,Live,0.0081,2459.48,20:42,60
+El Salao Campollano,MUB-Sulfate,2,Live,0.0081,2436.67,21:02,80
+El Salao Campollano,MUB-Sulfate,2,Live,0.0081,2358.42,21:20,100
+El Salao Campollano,MUB-Sulfate,2,Live,0.0081,2737.08,21:40,120
+El Salao Campollano,MUB-Sulfate,3,Control,0.0054,1377.76,19:43,0
+El Salao Campollano,MUB-Sulfate,3,Control,0.0054,1362.98,20:02,20
+El Salao Campollano,MUB-Sulfate,3,Control,0.0054,1361.01,20:22,40
+El Salao Campollano,MUB-Sulfate,3,Control,0.0054,1363.48,20:43,60
+El Salao Campollano,MUB-Sulfate,3,Control,0.0054,1367.38,21:02,80
+El Salao Campollano,MUB-B-Cellobioside,1,Live,0.0064,1439.12,19:44,0
+El Salao Campollano,MUB-B-Cellobioside,1,Live,0.0064,1426.21,20:02,20
+El Salao Campollano,MUB-B-Cellobioside,1,Live,0.0064,1785.9,20:22,40
+El Salao Campollano,MUB-B-Cellobioside,1,Live,0.0064,1377.83,20:43,60
+El Salao Campollano,MUB-B-Cellobioside,1,Live,0.0064,1383.82,21:03,80
+El Salao Campollano,MUB-B-Cellobioside,1,Live,0.0064,1484.71,21:21,100
+El Salao Campollano,MUB-B-Cellobioside,1,Live,0.0064,1486.92,21:41,120
+El Salao Campollano,MUB-B-Cellobioside,2,Live,0.0105,1440.07,19:44,0
+El Salao Campollano,MUB-B-Cellobioside,2,Live,0.0105,1415.49,20:03,20
+El Salao Campollano,MUB-B-Cellobioside,2,Live,0.0105,1419.3,20:22,40
+El Salao Campollano,MUB-B-Cellobioside,2,Live,0.0105,1411.72,20:43,60
+El Salao Campollano,MUB-B-Cellobioside,2,Live,0.0105,1401.09,21:03,80
+El Salao Campollano,MUB-B-Cellobioside,2,Live,0.0105,1431.03,21:21,100
+El Salao Campollano,MUB-B-Cellobioside,2,Live,0.0105,1426.16,21:41,120
+El Salao Campollano,MUB-B-Cellobioside,3,Control,0.0041,3700.58,19:44,0
+El Salao Campollano,MUB-B-Cellobioside,3,Control,0.0041,3591.17,20:03,20
+El Salao Campollano,MUB-B-Cellobioside,3,Control,0.0041,3592.97,20:23,40
+El Salao Campollano,MUB-B-Cellobioside,3,Control,0.0041,3598.24,20:43,60
+El Salao Campollano,MUB-B-Cellobioside,3,Control,0.0041,3453.6,21:03,80
+El Salao Campollano,MUB-B-Cellobioside,3,Control,0.0041,4197.93,21:22,100
+El Salao Campollano,MUB-B-Cellobioside,3,Control,0.0041,3777.3,21:41,120
+El Salao Campollano,MUB-PO4,1,Live,0.0109,1650.48,19:45,0
+El Salao Campollano,MUB-PO4,1,Live,0.0109,1644.49,20:03,20
+El Salao Campollano,MUB-PO4,1,Live,0.0109,1658.87,20:23,40
+El Salao Campollano,MUB-PO4,1,Live,0.0109,1661.7,20:44,60
+El Salao Campollano,MUB-PO4,1,Live,0.0109,1656.99,21:03,80
+El Salao Campollano,MUB-PO4,1,Live,0.0109,1668.83,21:22,100
+El Salao Campollano,MUB-PO4,1,Live,0.0109,1693.2,21:42,120
+El Salao Campollano,MUB-PO4,2,Live,0.0125,1563.19,19:45,0
+El Salao Campollano,MUB-PO4,2,Live,0.0125,1538.06,20:04,20
+El Salao Campollano,MUB-PO4,2,Live,0.0125,1501.76,20:23,40
+El Salao Campollano,MUB-PO4,2,Live,0.0125,1512.54,20:44,60
+El Salao Campollano,MUB-PO4,2,Live,0.0125,1503.09,21:04,80
+El Salao Campollano,MUB-PO4,2,Live,0.0125,1496.13,21:22,100
+El Salao Campollano,MUB-PO4,2,Live,0.0125,1492.96,21:42,120
+El Salao Campollano,MUB-PO4,3,Control,0.0049,2387.78,20:04,20
+El Salao Campollano,MUB-PO4,3,Control,0.0049,2391.01,20:23,40
+El Salao Campollano,MUB-PO4,3,Control,0.0049,2343.35,20:44,60
+El Salao Campollano,MUB-PO4,3,Control,0.0049,2423.44,21:04,80
+El Salao Campollano,MUB-PO4,3,Control,0.0049,2323.54,21:22,100
+El Salao Campollano,MUB-PO4,3,Control,0.0049,2335.49,21:42,120
+Chiguiri Abajo,Leucine-AMC,1,Live,0.0085,1584.55,14:40,0
+Chiguiri Abajo,Leucine-AMC,1,Live,0.0085,6249.05,15:00,20
+Chiguiri Abajo,Leucine-AMC,1,Live,0.0085,6161.63,15:20,40
+Chiguiri Abajo,Leucine-AMC,1,Live,0.0085,7511.26,15:40,60
+Chiguiri Abajo,Leucine-AMC,1,Live,0.0085,8114.69,16:00,80
+Chiguiri Abajo,Leucine-AMC,1,Live,0.0085,8935.17,16:20,100
+Chiguiri Abajo,Leucine-AMC,1,Live,0.0085,8904.58,16:38,120
+Chiguiri Abajo,Leucine-AMC,2,Live,0.007,1572.2,14:40,0
+Chiguiri Abajo,Leucine-AMC,2,Live,0.007,5051.54,15:00,20
+Chiguiri Abajo,Leucine-AMC,2,Live,0.007,5579.54,15:20,40
+Chiguiri Abajo,Leucine-AMC,2,Live,0.007,7561.15,15:40,60
+Chiguiri Abajo,Leucine-AMC,2,Live,0.007,7893.68,16:00,80
+Chiguiri Abajo,Leucine-AMC,2,Live,0.007,7713.02,16:20,100
+Chiguiri Abajo,Leucine-AMC,2,Live,0.007,7906.01,16:38,120
+Chiguiri Abajo,Leucine-AMC,3,Control,0.0043,7589.49,15:20,40
+Chiguiri Abajo,Leucine-AMC,3,Control,0.0043,7608.82,15:40,60
+Chiguiri Abajo,Leucine-AMC,3,Control,0.0043,7283.18,16:00,80
+Chiguiri Abajo,Leucine-AMC,3,Control,0.0043,7711.79,16:20,100
+Chiguiri Abajo,Leucine-AMC,3,Control,0.0043,7220.85,16:39,120
+Chiguiri Abajo,Arginine-AMC,1,Live,0.0157,1493.23,14:40,0
+Chiguiri Abajo,Arginine-AMC,1,Live,0.0157,5462.95,15:00,20
+Chiguiri Abajo,Arginine-AMC,1,Live,0.0157,5420.48,15:20,40
+Chiguiri Abajo,Arginine-AMC,1,Live,0.0157,8959.23,15:40,60
+Chiguiri Abajo,Arginine-AMC,1,Live,0.0157,8926.77,16:00,80
+Chiguiri Abajo,Arginine-AMC,1,Live,0.0157,8489.98,16:20,100
+Chiguiri Abajo,Arginine-AMC,1,Live,0.0157,8437.5,16:39,120
+Chiguiri Abajo,Arginine-AMC,2,Live,0.0126,1516.21,14:41,0
+Chiguiri Abajo,Arginine-AMC,2,Live,0.0126,4769.23,15:01,20
+Chiguiri Abajo,Arginine-AMC,2,Live,0.0126,4821.2,15:21,40
+Chiguiri Abajo,Arginine-AMC,2,Live,0.0126,7554.4,15:40,60
+Chiguiri Abajo,Arginine-AMC,2,Live,0.0126,8891.23,16:01,80
+Chiguiri Abajo,Arginine-AMC,2,Live,0.0126,9145.82,16:21,100
+Chiguiri Abajo,Arginine-AMC,2,Live,0.0126,9427.74,16:39,120
+Chiguiri Abajo,Arginine-AMC,3,Control,0.0048,6063.98,15:01,20
+Chiguiri Abajo,Arginine-AMC,3,Control,0.0048,8204.37,15:21,40
+Chiguiri Abajo,Arginine-AMC,3,Control,0.0048,7839.52,15:41,60
+Chiguiri Abajo,Arginine-AMC,3,Control,0.0048,7989.52,16:01,80
+Chiguiri Abajo,Arginine-AMC,3,Control,0.0048,7957.16,16:21,100
+Chiguiri Abajo,Arginine-AMC,3,Control,0.0048,8059.71,16:39,120
+Chiguiri Abajo,MUB-Sulfate,1,Live,0.0099,18091.75,14:41,0
+Chiguiri Abajo,MUB-Sulfate,1,Live,0.0099,20342.25,15:01,20
+Chiguiri Abajo,MUB-Sulfate,1,Live,0.0099,18728.14,15:21,40
+Chiguiri Abajo,MUB-Sulfate,1,Live,0.0099,21201.56,15:41,60
+Chiguiri Abajo,MUB-Sulfate,1,Live,0.0099,21979.28,16:01,80
+Chiguiri Abajo,MUB-Sulfate,1,Live,0.0099,24425.47,16:21,100
+Chiguiri Abajo,MUB-Sulfate,1,Live,0.0099,20237.4,16:40,120
+Chiguiri Abajo,MUB-Sulfate,2,Live,0.0084,1441.55,14:41,0
+Chiguiri Abajo,MUB-Sulfate,2,Live,0.0084,2213.65,15:01,20
+Chiguiri Abajo,MUB-Sulfate,2,Live,0.0084,2191.12,15:21,40
+Chiguiri Abajo,MUB-Sulfate,2,Live,0.0084,2958.63,15:41,60
+Chiguiri Abajo,MUB-Sulfate,2,Live,0.0084,2954.12,16:01,80
+Chiguiri Abajo,MUB-Sulfate,2,Live,0.0084,3047.55,16:21,100
+Chiguiri Abajo,MUB-Sulfate,2,Live,0.0084,3129.52,16:40,120
+Chiguiri Abajo,MUB-Sulfate,3,Control,0.0051,1431.31,14:42,0
+Chiguiri Abajo,MUB-Sulfate,3,Control,0.0051,1520.21,15:02,20
+Chiguiri Abajo,MUB-Sulfate,3,Control,0.0051,4880.97,15:21,40
+Chiguiri Abajo,MUB-Sulfate,3,Control,0.0051,5019.26,15:42,60
+Chiguiri Abajo,MUB-Sulfate,3,Control,0.0051,4987.38,16:02,80
+Chiguiri Abajo,MUB-Sulfate,3,Control,0.0051,4901.44,16:22,100
+Chiguiri Abajo,MUB-Sulfate,3,Control,0.0051,4912.67,16:40,120
+Chiguiri Abajo,MUB-B-Cellobioside,1,Live,0.0036,1262.39,14:42,0
+Chiguiri Abajo,MUB-B-Cellobioside,1,Live,0.0036,1287.88,15:02,20
+Chiguiri Abajo,MUB-B-Cellobioside,1,Live,0.0036,1238.08,15:22,40
+Chiguiri Abajo,MUB-B-Cellobioside,1,Live,0.0036,1251.5,15:42,60
+Chiguiri Abajo,MUB-B-Cellobioside,1,Live,0.0036,1268.32,16:02,80
+Chiguiri Abajo,MUB-B-Cellobioside,1,Live,0.0036,1267.06,16:22,100
+Chiguiri Abajo,MUB-B-Cellobioside,1,Live,0.0036,1266.35,16:40,120
+Chiguiri Abajo,MUB-B-Cellobioside,2,Live,0.0063,1419.51,14:42,0
+Chiguiri Abajo,MUB-B-Cellobioside,2,Live,0.0063,1538.14,15:02,20
+Chiguiri Abajo,MUB-B-Cellobioside,2,Live,0.0063,1562.25,15:22,40
+Chiguiri Abajo,MUB-B-Cellobioside,2,Live,0.0063,1594.78,15:42,60
+Chiguiri Abajo,MUB-B-Cellobioside,2,Live,0.0063,1611.01,16:02,80
+Chiguiri Abajo,MUB-B-Cellobioside,2,Live,0.0063,1635.32,16:22,100
+Chiguiri Abajo,MUB-B-Cellobioside,2,Live,0.0063,1717.93,16:41,120
+Chiguiri Abajo,MUB-B-Cellobioside,3,Control,0.0047,3100.33,15:03,20
+Chiguiri Abajo,MUB-B-Cellobioside,3,Control,0.0047,3144.8,15:22,40
+Chiguiri Abajo,MUB-B-Cellobioside,3,Control,0.0047,3079.1,15:43,60
+Chiguiri Abajo,MUB-B-Cellobioside,3,Control,0.0047,3074.89,16:03,80
+Chiguiri Abajo,MUB-B-Cellobioside,3,Control,0.0047,3046.84,16:23,100
+Chiguiri Abajo,MUB-B-Cellobioside,3,Control,0.0047,3174.38,16:41,120
+Chiguiri Abajo,MUB-PO4,1,Live,0.0022,1338.91,14:43,0
+Chiguiri Abajo,MUB-PO4,1,Live,0.0022,1310.46,15:03,20
+Chiguiri Abajo,MUB-PO4,1,Live,0.0022,1298.22,15:23,40
+Chiguiri Abajo,MUB-PO4,1,Live,0.0022,1307.9,15:43,60
+Chiguiri Abajo,MUB-PO4,1,Live,0.0022,1290.29,16:03,80
+Chiguiri Abajo,MUB-PO4,1,Live,0.0022,1295.07,16:23,100
+Chiguiri Abajo,MUB-PO4,1,Live,0.0022,1295.33,16:41,120
+Chiguiri Abajo,MUB-PO4,2,Live,0.0042,1371.76,14:43,0
+Chiguiri Abajo,MUB-PO4,2,Live,0.0042,1337.73,15:03,20
+Chiguiri Abajo,MUB-PO4,2,Live,0.0042,1301.22,15:23,40
+Chiguiri Abajo,MUB-PO4,2,Live,0.0042,1300.29,15:44,60
+Chiguiri Abajo,MUB-PO4,2,Live,0.0042,1307.8,16:03,80
+Chiguiri Abajo,MUB-PO4,2,Live,0.0042,1318.49,16:23,100
+Chiguiri Abajo,MUB-PO4,2,Live,0.0042,1298.42,16:42,120
+Chiguiri Abajo,MUB-PO4,3,Control,0.0037,4702.58,14:43,0
+Chiguiri Abajo,MUB-PO4,3,Control,0.0037,4576.74,15:03,20
+Chiguiri Abajo,MUB-PO4,3,Control,0.0037,4612.82,15:23,40
+Chiguiri Abajo,MUB-PO4,3,Control,0.0037,4494.93,15:44,60
+Chiguiri Abajo,MUB-PO4,3,Control,0.0037,5016.16,16:03,80
+Chiguiri Abajo,MUB-PO4,3,Control,0.0037,4851.78,16:23,100
+Chiguiri Abajo,MUB-PO4,3,Control,0.0037,4921.61,16:42,120
+Los Bajos Corera,Leucine-AMC,1,Live,0.0161,1383.56,14:50,0
+Los Bajos Corera,Leucine-AMC,1,Live,0.0161,1419.84,15:08,20
+Los Bajos Corera,Leucine-AMC,1,Live,0.0161,1415.39,15:30,40
+Los Bajos Corera,Leucine-AMC,1,Live,0.0161,1409.42,15:48,60
+Los Bajos Corera,Leucine-AMC,1,Live,0.0161,1418.19,16:08,80
+Los Bajos Corera,Leucine-AMC,1,Live,0.0161,1417.58,16:29,100
+Los Bajos Corera,Leucine-AMC,1,Live,0.0161,1422.66,16:50,120
+Los Bajos Corera,Leucine-AMC,2,Live,0.0091,1359.89,14:50,0
+Los Bajos Corera,Leucine-AMC,2,Live,0.0091,1356.41,15:08,20
+Los Bajos Corera,Leucine-AMC,2,Live,0.0091,1352.77,15:30,40
+Los Bajos Corera,Leucine-AMC,2,Live,0.0091,1340.95,15:49,60
+Los Bajos Corera,Leucine-AMC,2,Live,0.0091,1350.63,16:08,80
+Los Bajos Corera,Leucine-AMC,2,Live,0.0091,1339.01,16:29,100
+Los Bajos Corera,Leucine-AMC,2,Live,0.0091,1336.03,16:50,120
+Los Bajos Corera,Leucine-AMC,3,Control,0.0044,10092.42,14:51,0
+Los Bajos Corera,Leucine-AMC,3,Control,0.0044,11208.42,15:30,40
+Los Bajos Corera,Leucine-AMC,3,Control,0.0044,10380.36,15:49,60
+Los Bajos Corera,Leucine-AMC,3,Control,0.0044,9361.24,16:08,80
+Los Bajos Corera,Leucine-AMC,3,Control,0.0044,8601.85,16:29,100
+Los Bajos Corera,Leucine-AMC,3,Control,0.0044,8872.07,16:50,120
+Los Bajos Corera,Arginine-AMC,1,Live,0.0179,1360.33,14:51,0
+Los Bajos Corera,Arginine-AMC,1,Live,0.0179,1363.8,15:08,20
+Los Bajos Corera,Arginine-AMC,1,Live,0.0179,1361.97,15:31,40
+Los Bajos Corera,Arginine-AMC,1,Live,0.0179,1351.05,15:49,60
+Los Bajos Corera,Arginine-AMC,1,Live,0.0179,1357.16,16:08,80
+Los Bajos Corera,Arginine-AMC,1,Live,0.0179,1341.75,16:30,100
+Los Bajos Corera,Arginine-AMC,1,Live,0.0179,1335.31,16:51,120
+Los Bajos Corera,Arginine-AMC,2,Live,0.0085,1312.85,14:51,0
+Los Bajos Corera,Arginine-AMC,2,Live,0.0085,1314.13,15:08,20
+Los Bajos Corera,Arginine-AMC,2,Live,0.0085,1302.78,15:31,40
+Los Bajos Corera,Arginine-AMC,2,Live,0.0085,1297.11,15:49,60
+Los Bajos Corera,Arginine-AMC,2,Live,0.0085,1301.12,16:09,80
+Los Bajos Corera,Arginine-AMC,2,Live,0.0085,1287.57,16:30,100
+Los Bajos Corera,Arginine-AMC,2,Live,0.0085,1286.24,16:51,120
+Los Bajos Corera,Arginine-AMC,3,Control,0.005,1357.54,15:08,20
+Los Bajos Corera,Arginine-AMC,3,Control,0.005,1349.37,15:31,40
+Los Bajos Corera,Arginine-AMC,3,Control,0.005,1339.07,15:50,60
+Los Bajos Corera,Arginine-AMC,3,Control,0.005,1341.89,16:09,80
+Los Bajos Corera,Arginine-AMC,3,Control,0.005,1339.61,16:30,100
+Los Bajos Corera,Arginine-AMC,3,Control,0.005,1361.93,16:51,120
+Los Bajos Corera,MUB-Sulfate,1,Live,0.0197,1411.51,14:51,0
+Los Bajos Corera,MUB-Sulfate,1,Live,0.0197,1505.92,15:09,20
+Los Bajos Corera,MUB-Sulfate,1,Live,0.0197,1462.89,15:31,40
+Los Bajos Corera,MUB-Sulfate,1,Live,0.0197,1515.01,15:50,60
+Los Bajos Corera,MUB-Sulfate,1,Live,0.0197,1327.24,16:09,80
+Los Bajos Corera,MUB-Sulfate,1,Live,0.0197,1366.99,16:30,100
+Los Bajos Corera,MUB-Sulfate,1,Live,0.0197,1542.44,16:52,120
+Los Bajos Corera,MUB-Sulfate,2,Live,0.0178,1540.81,14:52,0
+Los Bajos Corera,MUB-Sulfate,2,Live,0.0178,1574.79,15:09,20
+Los Bajos Corera,MUB-Sulfate,2,Live,0.0178,1554.98,15:32,40
+Los Bajos Corera,MUB-Sulfate,2,Live,0.0178,1561.36,15:50,60
+Los Bajos Corera,MUB-Sulfate,2,Live,0.0178,1555.82,16:09,80
+Los Bajos Corera,MUB-Sulfate,2,Live,0.0178,1546.27,16:30,100
+Los Bajos Corera,MUB-Sulfate,2,Live,0.0178,1555.51,16:52,120
+Los Bajos Corera,MUB-Sulfate,3,Control,0.0049,1286.13,14:52,0
+Los Bajos Corera,MUB-Sulfate,3,Control,0.0049,1265.72,15:09,20
+Los Bajos Corera,MUB-Sulfate,3,Control,0.0049,1250.17,15:32,40
+Los Bajos Corera,MUB-Sulfate,3,Control,0.0049,1256.63,15:51,60
+Los Bajos Corera,MUB-B-Cellobioside,1,Live,0.0152,1411.85,14:52,0
+Los Bajos Corera,MUB-B-Cellobioside,1,Live,0.0152,1409.76,15:09,20
+Los Bajos Corera,MUB-B-Cellobioside,1,Live,0.0152,1396.76,15:32,40
+Los Bajos Corera,MUB-B-Cellobioside,1,Live,0.0152,1396.86,15:51,60
+Los Bajos Corera,MUB-B-Cellobioside,1,Live,0.0152,1406.68,16:10,80
+Los Bajos Corera,MUB-B-Cellobioside,1,Live,0.0152,1385.04,16:31,100
+Los Bajos Corera,MUB-B-Cellobioside,1,Live,0.0152,1385.11,16:52,120
+Los Bajos Corera,MUB-B-Cellobioside,2,Live,0.0145,1381.87,14:52,0
+Los Bajos Corera,MUB-B-Cellobioside,2,Live,0.0145,1369.68,15:10,20
+Los Bajos Corera,MUB-B-Cellobioside,2,Live,0.0145,1389.66,15:33,40
+Los Bajos Corera,MUB-B-Cellobioside,2,Live,0.0145,1383.48,15:51,60
+Los Bajos Corera,MUB-B-Cellobioside,2,Live,0.0145,1426.7,16:10,80
+Los Bajos Corera,MUB-B-Cellobioside,2,Live,0.0145,1387.39,16:31,100
+Los Bajos Corera,MUB-B-Cellobioside,2,Live,0.0145,1401.63,16:53,120
+Los Bajos Corera,MUB-B-Cellobioside,3,Control,0.0024,1255.61,15:33,40
+Los Bajos Corera,MUB-B-Cellobioside,3,Control,0.0024,1254.42,15:51,60
+Los Bajos Corera,MUB-B-Cellobioside,3,Control,0.0024,1244.71,16:10,80
+Los Bajos Corera,MUB-B-Cellobioside,3,Control,0.0024,1239.95,16:32,100
+Los Bajos Corera,MUB-B-Cellobioside,3,Control,0.0024,1229.79,16:52,120
+Los Bajos Corera,MUB-PO4,1,Live,0.0179,2943.44,14:53,0
+Los Bajos Corera,MUB-PO4,1,Live,0.0179,3134.74,15:10,20
+Los Bajos Corera,MUB-PO4,1,Live,0.0179,3091.95,15:34,40
+Los Bajos Corera,MUB-PO4,1,Live,0.0179,2993.29,15:52,60
+Los Bajos Corera,MUB-PO4,1,Live,0.0179,2865.11,16:11,80
+Los Bajos Corera,MUB-PO4,1,Live,0.0179,2970.9,16:32,100
+Los Bajos Corera,MUB-PO4,1,Live,0.0179,2971.82,16:53,120
+Los Bajos Corera,MUB-PO4,2,Live,0.0178,1557.65,14:53,0
+Los Bajos Corera,MUB-PO4,2,Live,0.0178,1545.91,15:10,20
+Los Bajos Corera,MUB-PO4,2,Live,0.0178,1561.2,15:34,40
+Los Bajos Corera,MUB-PO4,2,Live,0.0178,1564.41,15:52,60
+Los Bajos Corera,MUB-PO4,2,Live,0.0178,1564.78,16:11,80
+Los Bajos Corera,MUB-PO4,2,Live,0.0178,1556.97,16:32,100
+Los Bajos Corera,MUB-PO4,2,Live,0.0178,1554.66,16:54,120
+Los Bajos Corera,MUB-PO4,3,Control,0.005,5691.35,15:10,20
+Los Bajos Corera,MUB-PO4,3,Control,0.005,5644.93,15:34,40
+Los Bajos Corera,MUB-PO4,3,Control,0.005,5652.45,15:52,60
+Los Bajos Corera,MUB-PO4,3,Control,0.005,5554.84,16:11,80
+Los Bajos Corera,MUB-PO4,3,Control,0.005,5698.6,16:32,100
+Los Bajos Corera,MUB-PO4,3,Control,0.005,5714.12,16:54,120
