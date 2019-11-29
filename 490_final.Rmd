@@ -65,7 +65,9 @@ p_raw <- ggplot(mydata, aes(x = elapsed.hr,
   geom_smooth(aes(group = Cuvette),
               method = "lm",
               se = FALSE) +
-  facet_wrap(Substrate~Site, scales = "free")
+  facet_wrap(Substrate~Site, scales = "free") +
+  
+  theme(text = element_text(size = 6))
 
 print(p_raw)
 ```
@@ -165,5 +167,33 @@ rates_summ <- rates %>%
   group_by(Site, Substrate, filter.type) %>%
   summarise(mean.v0 = mean(v0.norm, na.rm = TRUE),
             v0.sd = sd(v0.norm, na.rm  = TRUE))
+```
+
+### Final plot
+Which will show enzymatic activity for live samples and controls for each site and substrate
+```{r, warning = FALSE}
+p_rates <- ggplot(rates_summ, aes(x=Site, 
+                                  y=mean.v0, 
+                                  shape = filter.type)) + 
+  
+  geom_point() + 
+  geom_pointrange(aes(ymin = mean.v0 - v0.sd,
+                      ymax = mean.v0 + v0.sd)) +
+  
+  ylab(expression(paste(v[0], ", ", mu, "mol ", L^{-1}, " ", hr^{-1}))) +
+  scale_shape_manual(values = c(1, 19), 
+                     name = "treatment") +
+ 
+  facet_wrap(~Substrate, scales = "free_y") +
+  
+  theme_classic() +
+  
+  theme(
+        strip.text = element_text(size = 10),
+        legend.position = c(0.85, 0.15),
+        text = element_text(size = 10),
+        axis.text.x = element_text(angle = -45, hjust = 0))
+
+print(p_rates)         
 ```
 
