@@ -34,19 +34,44 @@ library(devtools)
 library(lmstats)
 ```
 
+### Thermal degradation test
+A test of fluorogenic substrate proxies and their stability at high temperatures. 
 Read in your data from wherever it is stored in your drive. You can use glimpse to make sure it looks correct
 
 ```{r, message = FALSE}
-mydata <- read.csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.csv")
-glimpse(mydata)
+thermaldeg_data <- read_csv("/Users/AL/Desktop/geol490/final_project/2018_10_31_thermaldeg_markdown.csv")
+glimpse(thermaldeg_data)
+```
+
+```{r, echo = FALSE}
+thermaldeg_data <- thermaldeg_data %>%
+  mutate(time.posix = hms(time)) %>%
+  group_by(sample, substrate, replicate, std, temperature) %>%
+  mutate(elapsed.time = as.numeric(time - min(time))/ 3600)
+```
+
+#### Plot raw thermal degradation data
+```{r}
+raw_thermal <- ggplot(thermaldeg_data, aes(x=elapsed.time, y=RFU, colour = substrate, shape = as.factor(replicate))) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE) +
+  expand_limits(ymin = 0) + 
+  facet_grid(substrate~temperature, scales = "free_y")
+print(raw_thermal)
+```
+
+### Begin substrate data
+Read in your next dataset
+```{r, message = FALSE}
+panamadata <- read.csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.csv")
 ```
     
 #### Adjust data to improve time and date  
 
 The time column in my csv represents at what time each fluorometer measurement was taken. Here we mutate our date and time so all measurements are placed on the same two hour time scale, and we call this elapsed hour. 
 
-```{r, message = FALSE}
-mydata <- read_csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.csv") %>%
+```{r, echo = FALSE, message = FALSE}
+panamadata <- read_csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.csv") %>%
   mutate(date.time = ymd_hms(paste("2020-01-01", Time))) %>%
   rename(filter.type = `Filter type`, filter.weight = `Filter weight`) %>%
   group_by(Site, Substrate, Cuvette, filter.type, filter.weight) %>%
@@ -58,7 +83,7 @@ mydata <- read_csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.c
 Ggplot is a great way to map data in a professional looking manner
 
 ```{r}
-p_raw <- ggplot(mydata, aes(x = elapsed.hr,
+raw_panama <- ggplot(panamadata, aes(x = elapsed.hr,
                             y = RFU,
                             color = filter.type)) +
   geom_point() +
@@ -69,7 +94,7 @@ p_raw <- ggplot(mydata, aes(x = elapsed.hr,
   
   theme(text = element_text(size = 6))
 
-print(p_raw)
+print(raw_panama)
 ```
 
 ### Begin analysis 
@@ -83,7 +108,7 @@ lm_fun <- function(df) {
 
 #### Calculate slope, standard error and p value
 ```{r}
-slopes <- mydata %>%
+slopes <- panamadata %>%
   nest() %>%
   mutate(lmstats_df = map(data, lm_fun)) %>%
   mutate(uncal.slope = map_dbl(lmstats_df, function(x) x[1, "slope"]),
@@ -94,7 +119,7 @@ slopes <- mydata %>%
   
 Make a column in the slopes data for which fluorophore goes with which substrate
 ```{r, warning = FALSE}
-fluorophore_lookup <- data.frame(Substrate = unique(mydata$Substrate), 
+fluorophore_lookup <- data.frame(Substrate = unique(panamadata$Substrate), 
                                  fluorophore = c("AMC",
                                                  "AMC",
                                                  "MUB",
@@ -151,7 +176,7 @@ calib_slopes <- calib %>%
 Here we will combine our two dataets, dividing our slopes by the calibration slopes. First we are finding the mean filter slice weight.
 
 ```{r, warning = FALSE}
-mean.filter.weight = 10 * mean(mydata$filter.weight)
+mean.filter.weight = 10 * mean(panamadata$filter.weight)
 
 rates <- slopes %>%
   left_join(calib_slopes, by = "fluorophore") %>%
