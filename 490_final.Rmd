@@ -76,6 +76,7 @@ mydata <- read_csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.c
 You will now find an elapsed hour column, which will help us compare all results over the same time scale
 
 ### Plot the raw data
+Ggplot is a great way to map data in a professional looking manner
 
 ```{r}
 p_raw <- ggplot(mydata, aes(x = elapsed.hr,
@@ -88,6 +89,37 @@ p_raw <- ggplot(mydata, aes(x = elapsed.hr,
   facet_wrap(Substrate~Site, scales = "free")
 ```
 
+
 ```{r}
 print(p_raw)
+```
+
+Here we create a function that will create a dataframe comparing RFU to elapsed time. Lm_stats provides us with information such as the slope, intercept, and p value
+```{r}
+lm_fun <- function(df) {
+  df <- as.data.frame(df)
+  lm_stats(df, "elapsed.hr", "RFU")
+}
+```
+
+### Calculate Slopes
+```{r}
+slopes <- mydata %>%
+  nest() %>%
+  mutate(lmstats_df = map(data, lm_fun)) %>%
+  mutate(uncal.slope = map_dbl(lmstats_df, function(x) x[1, "slope"]),
+         uncal.slope.se = map_dbl(lmstats_df, function(x) x[1, "slope.se"]),
+         rsq = map_dbl(lmstats_df, function(x) x[1, "pval"]))
+```
+
+Make a column in the slopes data for which fluorophore goes with which substrate
+```{r, warning = FALSE}
+fluorophore_lookup <- data.frame(Substrate = unique(mydata$Substrate), 
+                                 fluorophore = c("AMC",
+                                                 "AMC",
+                                                 "MUB",
+                                                 "MUB",
+                                                 "MUB"))
+slopes <- slopes %>%
+  left_join(fluorophore_lookup, by = "Substrate")
 ```
