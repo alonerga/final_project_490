@@ -123,3 +123,29 @@ fluorophore_lookup <- data.frame(Substrate = unique(mydata$Substrate),
 slopes <- slopes %>%
   left_join(fluorophore_lookup, by = "Substrate")
 ```
+
+
+### Add in calibration data
+We want our slopes of substrates to be calibrated with what the fluorophores are doing. 
+
+```{r, message = FALSE}
+calib <- read_csv("/Users/AL/Desktop/geol490/final_project/2018_11_29_Calibration_Markdown.csv") %>%
+  rename(conc.mM = `concentration (mM)`, fluorophore = sample) %>%
+  mutate(conc.uM = conc.mM * 1000) 
+```
+
+Plot this data 
+```{r}
+p_calib <- ggplot(calib, aes(x=conc.uM, y=RFU, colour = as.factor(temperature))) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) + 
+  facet_wrap(~fluorophore)
+```
+
+```{r}
+print(p_calib) 
+```
+
+
+
+
