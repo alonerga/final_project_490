@@ -198,7 +198,7 @@ v_o = \frac{V_{max} \times [S]}{K_m + [S]}
 <div id="initial-steps" class="section level3">
 <h3>Initial steps</h3>
 <p>We will use a variety of packages and sets of packages to analyze this data in R. Tidyverse is a set of packages meant for data science. Lubridate helps ease the complications surrounding dates and times in R. Devtools creates a directory structure for your packages. Lmstats provides vector summaries of linear models.</p>
-<p><em>tidyverse</em>, <em>lubridate</em> and <em>devtools</em>: Install the packages first, then load them in</p>
+<p><strong>tidyverse</strong>, <strong>lubridate</strong>, <strong>devtools</strong>, and <strong>lmstats</strong>: Install the packages first, then load them in</p>
 <pre class="r"><code>library(tidyverse)
 library(lubridate)
 library(devtools)
@@ -306,6 +306,22 @@ print(p_calib) </code></pre>
 </div>
 <div id="combine-datasets" class="section level3">
 <h3>Combine datasets</h3>
+<p>Here we will combine our two dataets, dividing our slopes by the calibration slopes. First we are finding the mean filter slice weight.</p>
+<pre class="r"><code>mean.filter.weight = 10 * mean(mydata$filter.weight)
+
+rates &lt;- slopes %&gt;%
+  left_join(calib_slopes, by = &quot;fluorophore&quot;) %&gt;%
+  mutate(v0.unnorm = uncal.slope / calib.slope,
+         v0.unnorm.se = uncal.slope.se / calib.slope,
+         v0.norm = uncal.slope * 10 / 0.120,
+         v0.norm.se = uncal.slope.se * (mean.filter.weight / filter.weight) / 0.120) </code></pre>
+<div id="summarise-rates-by-calulating-mean-rates" class="section level4">
+<h4>Summarise rates by calulating mean rates</h4>
+<pre class="r"><code>rates_summ &lt;- rates %&gt;%
+  group_by(Site, Substrate, filter.type) %&gt;%
+  summarise(mean.v0 = mean(v0.norm, na.rm = TRUE),
+            v0.sd = sd(v0.norm, na.rm  = TRUE))</code></pre>
+</div>
 </div>
 
 

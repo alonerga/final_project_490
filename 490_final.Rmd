@@ -25,7 +25,7 @@ $$
 We will use a variety of packages and sets of packages to analyze this data in R. Tidyverse is a set of packages meant for data science. Lubridate helps ease the complications surrounding dates and times in R. Devtools creates a directory structure for your packages. Lmstats provides vector summaries of linear models.
 
 
-*tidyverse*, *lubridate* and *devtools*: Install the packages first, then load them in 
+**tidyverse**, **lubridate**, **devtools**, and **lmstats**: Install the packages first, then load them in 
 
 ```{r, message = FALSE}
 library(tidyverse)
@@ -36,7 +36,7 @@ library(lmstats)
 
 Read in your data from wherever it is stored in your drive. You can use glimpse to make sure it looks correct
 
-```{r}
+```{r, message = FALSE}
 mydata <- read.csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.csv")
 glimpse(mydata)
 ```
@@ -146,3 +146,24 @@ calib_slopes <- calib %>%
 
 
 ### Combine datasets
+Here we will combine our two dataets, dividing our slopes by the calibration slopes. First we are finding the mean filter slice weight.
+
+```{r, warning = FALSE}
+mean.filter.weight = 10 * mean(mydata$filter.weight)
+
+rates <- slopes %>%
+  left_join(calib_slopes, by = "fluorophore") %>%
+  mutate(v0.unnorm = uncal.slope / calib.slope,
+         v0.unnorm.se = uncal.slope.se / calib.slope,
+         v0.norm = uncal.slope * 10 / 0.120,
+         v0.norm.se = uncal.slope.se * (mean.filter.weight / filter.weight) / 0.120) 
+```
+
+#### Summarise rates by calulating mean rates
+```{r}
+rates_summ <- rates %>%
+  group_by(Site, Substrate, filter.type) %>%
+  summarise(mean.v0 = mean(v0.norm, na.rm = TRUE),
+            v0.sd = sd(v0.norm, na.rm  = TRUE))
+```
+
