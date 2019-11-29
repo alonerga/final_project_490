@@ -12,7 +12,7 @@ output: html_document
 
 This is an R markdown file showing analysis of research I conducted in Dr. Andrew Steen's biogeochemistry lab. This markdown can be used as a reference for extracellular enzyme assay analyses, or in order to reproduce the analysis we did. 
 
-#### Research Background  
+#### Research background  
 The goal of this project is to determine how extracellular enzymes are reacting with substrates in the various hot springs in which the samples were collected. We are hoping to understand if enzymes are following Michaelis Menten kinetics. 
 Inline equations can be useful for displaying variables (greek or otherwise) like $K_m$ or $\mu$.
 
@@ -21,37 +21,20 @@ $$
 v_o = \frac{V_{max} \times [S]}{K_m + [S]}
 $$ 
 
-### Initial Steps  
-We will use a variety of packages and sets of packages to analyze this data in R. Tidyverse is a set of packages meant for data science. Lubridate helps ease the complications surrounding dates and times in R. Devtools creates a directory structure for your packages.  
+### Initial steps  
+We will use a variety of packages and sets of packages to analyze this data in R. Tidyverse is a set of packages meant for data science. Lubridate helps ease the complications surrounding dates and times in R. Devtools creates a directory structure for your packages. Lmstats provides vector summaries of linear models.
 
 
-Note that you can run code that *doesn't* show in the output file, even though it runs
-```{r, echo = FALSE}
-a <- 2+2
-```
-
-```{r}
-print(a)
-```
-
-We will use the *tidyverse*, *lubridate* and *devtools* packages:
+*tidyverse*, *lubridate* and *devtools*: Install the packages first, then load them in 
 
 ```{r, message = FALSE}
-# install.packages("package name") first, then do the following:
 library(tidyverse)
 library(lubridate)
 library(devtools)
-```
-
-Now that we have our main packages loaded in, we need one more package: *lmstats*. Lmstats is a function to provide a vector summary output of linear models. 
-
-```{r, message = FALSE}
-# Must have done library(devtools) to complete next step:
-# install_github("adsteen/lmstats")
 library(lmstats)
 ```
 
-Read in your data from wherever it is stored in your drive, and use glimpse to make sure it looks correct
+Read in your data from wherever it is stored in your drive. You can use glimpse to make sure it looks correct
 
 ```{r}
 mydata <- read.csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.csv")
@@ -60,10 +43,7 @@ glimpse(mydata)
     
 #### Adjust data to improve time and date  
 
-The data in my csv is hour:minute of when each fluorometer measurement was taken. This is helpful to know the change of RFU over time, but isn't so helpful when we want to compare all of our results across a similar two hour time period. Here we mutate our date and time so all measurements are placed on a similar scale and will be something that the computer will understand.
-
-We want our date and time to be in year month day, hour minute second, therefore *ymd_hms*  
-Rename our column heads (spaces get tricky with R)
+The time column in my csv represents at what time each fluorometer measurement was taken. Here we mutate our date and time so all measurements are placed on the same two hour time scale, and we call this elapsed hour. 
 
 ```{r, message = FALSE}
 mydata <- read_csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.csv") %>%
@@ -73,9 +53,8 @@ mydata <- read_csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.c
   mutate(elapsed.hr = as.numeric(date.time -  min(date.time)) / 3600) # divide by 3600 to go from seconds to hours
 ```
 
-You will now find an elapsed hour column, which will help us compare all results over the same time scale
 
-### Plot the raw data
+#### Plot the raw data
 Ggplot is a great way to map data in a professional looking manner
 
 ```{r}
@@ -87,13 +66,11 @@ p_raw <- ggplot(mydata, aes(x = elapsed.hr,
               method = "lm",
               se = FALSE) +
   facet_wrap(Substrate~Site, scales = "free")
-```
 
-
-```{r}
 print(p_raw)
 ```
 
+### Begin analysis 
 Here we create a function that will create a dataframe comparing RFU to elapsed time. Lm_stats provides us with information such as the slope, intercept, and p value
 ```{r}
 lm_fun <- function(df) {
@@ -102,7 +79,7 @@ lm_fun <- function(df) {
 }
 ```
 
-### Calculate Slopes
+#### Calculate slope, standard error and p value
 ```{r}
 slopes <- mydata %>%
   nest() %>%
@@ -111,7 +88,8 @@ slopes <- mydata %>%
          uncal.slope.se = map_dbl(lmstats_df, function(x) x[1, "slope.se"]),
          rsq = map_dbl(lmstats_df, function(x) x[1, "pval"]))
 ```
-
+  
+  
 Make a column in the slopes data for which fluorophore goes with which substrate
 ```{r, warning = FALSE}
 fluorophore_lookup <- data.frame(Substrate = unique(mydata$Substrate), 
@@ -125,8 +103,8 @@ slopes <- slopes %>%
 ```
 
 
-### Add in calibration data
-We want our slopes of substrates to be calibrated with what the fluorophores are doing. 
+### Calibration data 
+Our calibration data is how RFU changes with fluorophore concentration. Combining this with our previous substrate data we will be able to see enzymatic activity.
 
 ```{r, message = FALSE}
 calib <- read_csv("/Users/AL/Desktop/geol490/final_project/2018_11_29_Calibration_Markdown.csv") %>%
@@ -134,18 +112,37 @@ calib <- read_csv("/Users/AL/Desktop/geol490/final_project/2018_11_29_Calibratio
   mutate(conc.uM = conc.mM * 1000) 
 ```
 
-Plot this data 
+#### Plot calibration data
 ```{r}
-p_calib <- ggplot(calib, aes(x=conc.uM, y=RFU, colour = as.factor(temperature))) + 
+p_calib <- ggplot(calib, aes(x=conc.uM, 
+                             y=RFU, 
+                             colour = as.factor(temperature))) + 
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) + 
   facet_wrap(~fluorophore)
-```
 
-```{r}
 print(p_calib) 
 ```
 
+#### Create another function
+This time for our calibration data
+```{r}
+calib_lm_fun <- function(df) {
+  df <- as.data.frame(df)
+  lm_stats(df, "conc.uM", "RFU")
+}
+```
+
+#### Calculate slopes of the calibration curve
+And create a column for it in the dataframe
+```{r}
+calib_slopes <- calib %>%
+  group_by(fluorophore) %>%
+  nest() %>%
+  mutate(lmstats_df = map(data, calib_lm_fun),
+         calib.slope = map_dbl(lmstats_df, function(x) x[1, "slope"])) %>%
+  select(fluorophore, calib.slope)
+```
 
 
-
+### Combine datasets
