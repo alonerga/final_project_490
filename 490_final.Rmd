@@ -13,13 +13,14 @@ output: html_document
 This is an R markdown file showing analysis of research I conducted in Dr. Andrew Steen's biogeochemistry lab. This markdown can be used as a reference for extracellular enzyme assay analyses, or in order to reproduce the analysis we did. 
 
 #### Research background  
-The goal of this project is to determine how extracellular enzymes are reacting with substrates in the various hot springs in which the samples were collected. We are hoping to understand if enzymes are following Michaelis Menten kinetics. 
-Inline equations can be useful for displaying variables (greek or otherwise) like $K_m$ or $\mu$.
+The goal of this project is to determine how extracellular enzymes are reacting with substrates in the various hot springs in which the samples were collected. These samples come from different geothermal features across Panama, where there are unique biogeochemical interactions due to the convergent margins, volcanic arcs, microbes, and carbon fluxes. Enzymatic affects on carbon fluxes in these types of environments have been studied very little. We use fluorogenic substrate proxies to represent peptidases, polysaccharide hydrolases, sulfatases, and phosphotases, to get an idea of what these enzymes are breaking down. Most extracellular enzymes follow Michaelis-Menten kinetics, where the initial hydrolysis rate of an enzyme increases with substrate concentration, until it reaches an equillibrium hydrolysis rate. The equation is shown below with an image. 
 
-Display equations are set off from the rest of the text.
 $$
 v_o = \frac{V_{max} \times [S]}{K_m + [S]}
 $$ 
+![](images/Michaelis_Menten_curve_2.svg)
+
+**This analysis will provide us with $v_o$, the inital rate of reaction - micromoles of substrate being broken down per liter per hour at each site** 
 
 ### Initial steps  
 We will use a variety of packages and sets of packages to analyze this data in R. Tidyverse is a set of packages meant for data science. Lubridate helps ease the complications surrounding dates and times in R. Devtools creates a directory structure for your packages. Lmstats provides vector summaries of linear models.
@@ -55,9 +56,9 @@ thermaldeg_data <- thermaldeg_data %>%
 ```
 
 #### Plot raw thermal degradation data
-Ggplot is a great package for data visualization. It is relatively simple to use and creates professional looking plots. 
+Ggplot is a great package for data visualization. It is relatively simple to use and creates professional looking plots. We want to show the change in relative fluorescence units over time for our four substrates and buffer. A linear model is a great way to plot this and we can add a shaded region around each line for our standard error. The code below allows us to show this. 
 ```{r}
-raw_thermal <- ggplot(thermaldeg_data, aes(x=elapsed.time, 
+raw_thermalp <- ggplot(thermaldeg_data, aes(x=elapsed.time, 
                                            y=RFU, 
                                            colour = substrate, 
                                            shape = as.factor(replicate))) + 
@@ -68,12 +69,12 @@ raw_thermal <- ggplot(thermaldeg_data, aes(x=elapsed.time,
   
   facet_grid(substrate~temperature, scales = "free_y")
 
-print(raw_thermal)
+print(raw_thermalp)
 ```
 
-### Begin substrate data
-After testing the stability of our substrates, we are ready to move forward with our enzyme analysis. Read in your data from your live sample fluorometer measurements. 
-```{r, message = FALSE}
+### Enzyme assay data
+After showing that our substrates are relatively stable at high temperatures, we are ready to move forward with our enzyme analysis. Read in your data from your live sample fluorometer measurements. 
+```{r, echo = FALSE, message = FALSE}
 panamadata <- read.csv("/Users/AL/Desktop/geol490/final_project/2019_490_finaldata.csv")
 ```
     
@@ -90,10 +91,10 @@ panamadata <- read_csv("/Users/AL/Desktop/geol490/final_project/2019_490_finalda
 
 
 #### Plot the raw data
-After you have loaded in your data and made any neccessary manipulations to the time, names, or any other parts, you can now plot the raw data. We will use ggplot again for this. 
+After you have loaded in your data and made any neccessary manipulations to the time, names, or any other parts, you can now plot the raw data. We will use ggplot again for this. Similar to the thermal degradation plot, we want a linear model of the change in RFU over time. Using facet wrap or facet grid is helpful to break apart your sites and substrates and show them in an easily understood way. 
 
 ```{r}
-raw_panama <- ggplot(panamadata, aes(x = elapsed.hr,
+raw_panamap <- ggplot(panamadata, aes(x = elapsed.hr,
                                      y = RFU,
                                      color = filter.type)) +
   
@@ -106,11 +107,11 @@ raw_panama <- ggplot(panamadata, aes(x = elapsed.hr,
   
   theme(text = element_text(size = 6))
 
-print(raw_panama)
+print(raw_panamap)
 ```
 
 ### Begin analysis 
-Here we create a function that will create a dataframe comparing RFU to elapsed time. Lm_stats provides us with information such as the slope, intercept, and p value
+Here we create a function that will create a dataframe comparing RFU to elapsed time. Lm_stats provides us with information such as the slope, error, and p value, which we will need later on.
 ```{r}
 lm_fun <- function(df) {
   df <- as.data.frame(df)
@@ -119,6 +120,7 @@ lm_fun <- function(df) {
 ```
 
 #### Calculate slope, standard error and p value
+Using the function we just made, we can use map() to extract a vector summary of the slopes, standard errors, and p-values of our Panama data. Nesting will create a list-column of of these data frames, making it more tidy. 
 ```{r}
 slopes <- panamadata %>%
   nest() %>%
@@ -129,7 +131,7 @@ slopes <- panamadata %>%
 ```
   
   
-Make a column in the slopes data for which fluorophore goes with which substrate
+Make a column in the slopes data for which fluorophore goes with which substrate. We used leucine-AMC, arginine-AMC, MUB-sulfatase, MUB-b-cellobioside, and MUB-PO4. You should use the fluorophores which are appropriate for your data. Then we merge our two dataframes that have matching rows, by substrate.  
 ```{r, warning = FALSE}
 fluorophore_lookup <- data.frame(Substrate = unique(panamadata$Substrate), 
                                  fluorophore = c("AMC", "AMC", "MUB", "MUB", "MUB"))
@@ -139,18 +141,20 @@ slopes <- slopes %>%
 
 
 ### Calibration data 
-Our calibration data is how RFU changes with fluorophore concentration. Combining this with our previous substrate data we will be able to see enzymatic activity.
+Our calibration data is how RFU changes with fluorophore concentration. We will ultimately combine this data with our previous analysis to solve for $v_o$. 
+Read in your data. 
 
-```{r, message = FALSE}
+```{r, echo = FALSE, message = FALSE}
 calib <- read_csv("/Users/AL/Desktop/geol490/final_project/2018_11_29_Calibration_Markdown.csv") %>%
   rename(conc.mM = `concentration (mM)`, fluorophore = sample) %>%
   mutate(conc.uM = conc.mM * 1000) 
 ```
 
 #### Plot calibration data
+Using ggplot in a similar fashion as the previous plots. 
 ```{r}
-p_calib <- ggplot(calib, aes(x=conc.uM, 
-                             y=RFU, 
+plot_calib <- ggplot(calib, aes(x = conc.uM, 
+                             y = RFU, 
                              colour = as.factor(temperature))) + 
   
   geom_point() +
@@ -158,11 +162,11 @@ p_calib <- ggplot(calib, aes(x=conc.uM,
   
   facet_wrap(~fluorophore)
 
-print(p_calib) 
+print(plot_calib) 
 ```
 
 #### Create another function
-This time for our calibration data
+This function is exactly like the last, just changing from time to concentration of our substrates. 
 ```{r}
 calib_lm_fun <- function(df) {
   df <- as.data.frame(df)
@@ -171,7 +175,7 @@ calib_lm_fun <- function(df) {
 ```
 
 #### Calculate slopes of the calibration curve
-And create a column for it in the dataframe
+Again, a similar analysis as the RFU/time. We only need the type of fluorophore and the slope, which is what select() provides us. 
 ```{r}
 calib_slopes <- calib %>%
   group_by(fluorophore) %>%
@@ -183,7 +187,7 @@ calib_slopes <- calib %>%
 
 
 ### Combine datasets
-Here we will combine our two dataets, dividing our slopes by the calibration slopes. First we are finding the mean filter slice weight.
+Here we want to combine our two datasets, dividing our initial slopes by the calibration slopes. We can use our RFU/time and RFU/concentration data to calculate $v_o$. If you used replicates with varying filter weights, be sure to find the mean filter weight/measurement. Also take into account the amount of sample fluid that was filtered through each syringe, in my case 0.120 liters. 
 
 ```{r, warning = FALSE}
 mean.filter.weight = 10 * mean(panamadata$filter.weight)
@@ -196,7 +200,8 @@ rates <- slopes %>%
          v0.norm.se = uncal.slope.se * (mean.filter.weight / filter.weight) / 0.120) 
 ```
 
-#### Summarise rates by calulating mean rates
+#### Calculate mean rates
+Here we want to summarize our rates by calculating the mean rate of $v_o$, based on where the sample was taken, the susbtrate used, and whether it was a live sample or control sample.
 ```{r}
 rates_summ <- rates %>%
   group_by(Site, Substrate, filter.type) %>%
@@ -205,7 +210,7 @@ rates_summ <- rates %>%
 ```
 
 ### Final plot
-Which will show enzymatic activity for live samples and controls for each site and substrate
+We want the mean $v_o$ plotted based on site, showing both the live and control samples. Our ranges for each point will take into account standard deviation from the mean. Y lab can be used to change the y axis label, and anything in the theme() section just alters the appearance of the plot. 
 ```{r, warning = FALSE}
 p_rates <- ggplot(rates_summ, aes(x=Site, 
                                   y=mean.v0, 
@@ -225,10 +230,16 @@ p_rates <- ggplot(rates_summ, aes(x=Site,
   
   theme(
         strip.text = element_text(size = 10),
-        legend.position = c(0.85, 0.15),
+        legend.position = c(0.85, 0.10),
         text = element_text(size = 10),
         axis.text.x = element_text(angle = -45, hjust = 0))
 
 print(p_rates)         
 ```
 
+### Conclusion
+You should now have a plot showing your enzymatic activity for each substrate based at each site. Refer to https://github.com/alonerga/final_project_490.git for any questions about the code.  
+  
+  
+    
+    
