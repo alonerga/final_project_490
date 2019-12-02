@@ -5,9 +5,7 @@ date: "Fall 2019"
 output: html_document
 ---
 
-  
-    
-      
+
 ### Introduction
 
 This is an R markdown file showing analysis of research I conducted in Dr. Andrew Steen's biogeochemistry lab. This markdown can be used as a reference for extracellular enzyme assay analyses, or in order to reproduce the analysis we did. 
@@ -68,7 +66,8 @@ raw_thermalp <- ggplot(thermaldeg_data, aes(x = elapsed.time,
   geom_point() +
   geom_smooth(method = "lm", se = TRUE) +
   expand_limits(ymin = 0) + 
-  
+  scale_shape_discrete(name = "replicate") +
+
   facet_grid(substrate~temperature, scales = "free_y")
 
 print(raw_thermalp)
@@ -157,10 +156,11 @@ Using ggplot in a similar fashion as the previous plots.
 ```{r}
 plot_calib <- ggplot(calib, aes(x = conc.uM, 
                              y = RFU, 
-                             colour = as.factor(temperature))) + 
+                             colour = as.factor(temperature))) +
   
   geom_point() +
   geom_smooth(method = "lm", se = FALSE) + 
+  scale_color_discrete(name = "temperature") +
   
   facet_wrap(~fluorophore)
 
