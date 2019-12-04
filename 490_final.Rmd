@@ -35,7 +35,7 @@ library(devtools)
 library(lmstats)
 ```
 
-### Thermal degradation test
+## Thermal degradation test
 A test of substrates and their stability at high temperatures. We want to ensure that these substrates aren't breaking apart on their own, that way when we have live samples, any fluorometer readings we get can represent enzymatic activity.  
 Read in your data from wherever it is stored in your drive. You can use glimpse to make sure it looks correct
 
