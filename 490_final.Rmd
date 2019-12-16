@@ -2,7 +2,7 @@
 title: "Extracellular Enzyme Assay Analysis from Samples in Panama"
 author: "Andrew Lonergan"
 date: "Fall 2019"
-output: html_document
+output: md_document
 ---
 
 
